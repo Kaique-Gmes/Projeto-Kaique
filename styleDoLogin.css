@@ -182,7 +182,18 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.bg-cadastro {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-login {
   content: "";
   display: block;
   position: absolute;
@@ -197,7 +208,7 @@ body {
   opacity: 0.9;
 }
 
-.hero-cadastro {
+.hero-login {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -212,34 +223,24 @@ body {
   max-height: 400px;
 }
 
-.cadastro-content {
-  display: flex;
-  justify-content: center;
-}
-
-.texto-cadastro {
+.text-login {
+  margin-top: 50px;
   color: #FFF;
-  margin-top: 20px;
   margin-bottom: 30px;
   text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-.inputs-cadastro {
+.login-content {
   display: flex;
   flex-direction: column;
 }
 
-.input_cadastro {
-  margin-bottom: 12px;
-  border-radius: 10px;
-  background-color: transparent;
-  border-color: aliceblue;
-  padding: 14px;
-  color: white;
-  margin-right: 12px;
+.inputs-login {
+  display: flex;
+  flex-direction: column;
 }
 
-.input_cadastro2 {
+.input_login {
   margin-bottom: 12px;
   border-radius: 10px;
   background-color: transparent;
@@ -248,25 +249,30 @@ body {
   color: white;
 }
 
-.botao-cadastrar {
+.botao-login {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
   margin-top: 14px;
   border-radius: 10px;
-  border-color: #222;
+  border-color: black;
   padding: 14px;
   min-width: 210px;
 }
 
-.botao-cadastrar:hover {
+.login:hover {
   cursor: pointer;
   background-color: rgba(2, 45, 66, 0.7176470588);
   border-color: #FFF;
   color: #FFF;
 }
 
-.ref-to-login {
-  margin-top: 40px;
+.ref-to-cadastro {
+  margin-top: 70px;
   font-size: 12px;
 }
-.ref-to-login a {
+.ref-to-cadastro a {
   color: red;
-}/*# sourceMappingURL=styleCadastro.css.map */
+}/*# sourceMappingURL=styleDoLogin.css.map */

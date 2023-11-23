@@ -13,7 +13,18 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.bg-cadastro{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-login{
     content: '';
     display: block;
     position: absolute;
@@ -28,7 +39,7 @@ body{
     opacity: 0.9;
 }
 
-.hero-cadastro{
+.hero-login{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,61 +54,54 @@ body{
     max-height: 400px;
 }
 
-.cadastro-content{
+.text-login{
+    margin-top: 50px;
+    color: #FFF;
+    margin-bottom: 30px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.login-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-login{
+    display: flex;
+    flex-direction: column;
+}
+
+.input_login{
+    margin-bottom: 12px;
+    border-radius: 10px;
+    background-color: transparent;
+    border-color: aliceblue;
+    padding: 14px;
+    color: white;
+}
+
+.botao-login{
     display: flex;
     justify-content: center;
 }
 
-.texto-cadastro{
-    color: #FFF;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    text-shadow: 0.1em 0.1em 0.2em black;
-    
-}
-
-.inputs-cadastro{
-    display: flex;
-    flex-direction: column;
-
-}
-
-.input_cadastro{
-    margin-bottom: 12px;
-    border-radius: 10px;
-    background-color: transparent;
-    border-color: aliceblue;
-    padding: 14px;
-    color: white;
-    margin-right: 12px;
-}
-
-.input_cadastro2{
-    margin-bottom: 12px;
-    border-radius: 10px;
-    background-color: transparent;
-    border-color: aliceblue;
-    padding: 14px;
-    color: white;
-}
-
-.botao-cadastrar{
+.login{
     margin-top: 14px;
     border-radius: 10px;
-    border-color: #222;
+    border-color: black;
     padding: 14px;
     min-width: 210px;
 }
 
-.botao-cadastrar:hover{
+.login:hover{
     cursor: pointer;
     background-color: #022d42b7;
     border-color: #FFF;
     color: #FFF;
 }
 
-.ref-to-login{
-    margin-top: 40px;
+.ref-to-cadastro{
+    margin-top: 70px;
     font-size: 12px;
     a{
         color: red;
