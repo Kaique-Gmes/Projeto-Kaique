@@ -178,107 +178,137 @@ header {
   line-height: 150%;
 }
 
-body {
-  font-family: "Courier New", Courier, monospace;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.bg-treinador {
-  width: 100%;
-  height: 100vh;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-image: url(assetics/fundo\ livre.jpg);
+.bg-iniciais {
+  content: "";
+  display: block;
   position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #003a70), url(assetics/iniciais\ 1.jpg);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0.9;
 }
 
-.home-treinador {
-  margin-top: 40px;
+.navBar-iniciais {
+  background-color: #003a70;
+}
+
+.texto-iniciais {
+  font-size: 35px;
+}
+
+.hero-iniciais {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+}
+
+.slide img {
+  width: 300px;
+  margin-left: 250px;
+}
+
+.manual-navigation {
   position: absolute;
-  background-color: #0c3950;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 90px;
-  border-radius: 40px;
-  border-top: 10px #222;
-  max-height: 400px;
-}
-
-.texto-treinador {
+  width: 800px;
+  margin-top: -40px;
   display: flex;
   justify-content: center;
-  margin-top: 4%;
-  font-size: 20px;
-  color: #DCDCDC;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  -moz-text-align-last: center;
-       text-align-last: center;
-  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-.conhecer-mais {
-  margin-top: 20px;
+.manual-btn {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: 0.7s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: white;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+.navigation-auto div {
+  border: solid 2px #20a6ff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
   display: flex;
   justify-content: center;
-  font-size: 15px;
-  color: #FFF;
-  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-button {
-  cursor: pointer;
-  font-family: "Courier New", Courier, monospace;
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
 }
 
-.botao-conhecer {
-  margin-top: 30px;
-  padding: 25px;
-  border-radius: 12px;
-  border-color: transparent;
+#radio1:checked ~ .navigation-auto .auto-btn1 {
   background-color: #FFF;
-  min-width: 500px;
-  color: #222;
-  font-size: 18px;
 }
 
-.botao-conheco {
-  margin-top: 20px;
-  padding: 25px;
-  border-radius: 12px;
-  border-color: transparent;
+#radio2:checked ~ .navigation-auto .auto-btn2 {
   background-color: #FFF;
-  min-width: 500px;
-  color: #222;
-  font-size: 18px;
 }
 
-.botao-conhecer:hover {
-  background-color: #00293d;
-  color: #FFF;
-  border-color: #FFF;
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: #FFF;
 }
 
-.botao-conheco:hover {
-  background-color: #00293d;
-  color: #FFF;
-  border-color: #FFF;
-}
-
-.texto-levar-login {
-  margin-top: 80px;
-  color: #FFF;
-  text-shadow: 0.1em 0.1em 0.2em black;
-}
-.texto-levar-login a {
-  cursor: pointer;
-  color: red;
-  text-shadow: none;
-}/*# sourceMappingURL=styleTreinador.css.map */
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: #FFF;
+}/*# sourceMappingURL=styleIniciais.css.map */
