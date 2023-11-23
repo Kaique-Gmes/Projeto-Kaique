@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleCadastro.css">
+    <link rel="stylesheet" href="scriptCadastro.js">
     <title>Cadastro</title>
 </head>
 <body>
@@ -14,24 +15,66 @@
             </div>
             <div class="cadastro-content">
                 <div class="inputs-cadastro">
-                    <input placeholder="nome" id="input_cadastro">
-                    <input placeholder="email" id="input_cadastro">
-                    <input type="password" placeholder="senha" id="input_cadastro">
-                </div>
-                <div class="inputs-cadastro2">
-                    <input placeholder="sobrenome" id="input_cadastro2">
-                    <input placeholder="seu inicial" id="input_cadastro2">
-                    <input type="password" placeholder="confirmar senha" id="input_cadastro2">
+                    <div class="input1">
+                        <input placeholder="nome" class="input_cadastro" id="input_nomeCompleto">
+                        <input placeholder="nickname" class="input_cadastro2" id="input_nickname">
+                    </div>
+                    <div class="input2">
+                        <input placeholder="email" class="input_cadastro" id="input_email">
+                        <input placeholder="seu inicial" class="input_cadastro2" id="input_inicial">
+                    </div>
+                    <div class="input3">
+                        <input type="password" placeholder="senha" class="input_cadastro" id="input_senha">
+                        <input type="password" placeholder="confirmar senha" class="input_cadastro2" id="input_confirmarSenha">
+                    </div>
                 </div>
             </div>
             <div class="botao-cadastro">
                 <a href="#">
-                    <button class="botao-cadastrar">Cadastrar</button>
+                    <button class="botao-cadastrar" onclick="fazerCadastro()">Cadastrar</button>
                 </a>
             </div>
-        
         </main> 
         </div>
-    </div>
 </body>
 </html>
+
+<script>
+    function fazerCadastro(){
+    var nome = input_nomeCompleto.value;
+    var nick = input_nickname.value;
+    var email = input_email.value;
+    var pokemonInicial = input_inicial.value;
+    var senha = input_senha.value;
+    var confirmarSenha = input_confirmarSenha.value;
+
+    if(nome.length <= 3){
+        alert(`Nome precisa ser maiór que '3'`)
+    }
+    else if(nick.length < 1){
+        alert(`Insira um Nickname`)
+    }
+    else if(email.indexOf('@') == -1 || email.indexOf('.') == -1){
+        alert(`Email inválido`)
+    }
+    else if(pokemonInicial != "Charmander" && pokemonInicial != "Bulbassauro" && pokemonInicial != "Squirtle" && pokemonInicial != "Pikachu"){
+        alert(`Insira um pokemon inicial válido`)
+    }
+    else if(senha.length < 8){
+        alert(`Senha inválida`)
+    }
+    else if(senha.indexOf('!') == -1 && 
+    senha.indexOf('@') == -1 && 
+    senha.indexOf('#') == -1 && 
+    senha.indexOf('$') == -1 && 
+    senha.indexOf('%') == -1 && 
+    senha.indexOf('&') == -1 && 
+    senha.indexOf('*') == -1
+    ){
+alert(`Insíra um caracter especial`)
+    }
+    else if(confirmarSenha != senha){
+        alert(`Senhas não coincidem`)
+    }
+}
+</script>
