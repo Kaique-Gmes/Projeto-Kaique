@@ -15,7 +15,8 @@
     content: '';
     display: block;
     position: absolute;
-    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), $primary-normal), url(assetics/iniciais\ 1.jpg);
+    background-color: #222;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), $primary-normal);
     left: 0;
     top: 0;
     width: 100%;
@@ -27,11 +28,27 @@
 }
 
 .navBar-iniciais {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
     background-color: $primary-normal;
 }
 
+.nav-botao{
+    font-size: 24px;
+    color: #FFF;
+}
+
+.nav-botao:hover{
+    cursor: pointer;
+}
+
 .texto-iniciais {
-    font-size: 35px
+    font-size: 35px;
+    color: #FFF;
+    text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 .hero-iniciais {
@@ -66,8 +83,11 @@
 }
 
 .slide img {
-    width: 300px;
-    margin-left: 250px;
+    width: 280px;
+    height: 320px;
+    margin-left: 260px;
+    margin-top: 70px;
+    border-radius: 12px;
 }
 
 .manual-navigation {
@@ -79,7 +99,7 @@
 }
 
 .manual-btn {
-    border: 2px solid white;
+    border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -91,7 +111,7 @@
 }
 
 .manual-btn:hover {
-    background-color: white;
+    background-color: $primary-normal;
 }
 
 #radio1:checked~.first {
@@ -131,20 +151,149 @@
 }
 
 #radio1:checked~.navigation-auto .auto-btn1 {
-    background-color: #FFF;
+    background-color: $primary-normal;
 }
 
 #radio2:checked~.navigation-auto .auto-btn2 {
-    background-color: #FFF;
+    background-color: $primary-normal;
 
 }
 
 #radio3:checked~.navigation-auto .auto-btn3 {
-    background-color: #FFF;
+    background-color: $primary-normal;
 
 }
 
 #radio4:checked~.navigation-auto .auto-btn4 {
-    background-color: #FFF;
+    background-color: $primary-normal;
+}
 
+
+/*
+    ABOUT POKEMONS
+*/
+
+.about-Pokemons{
+    background-color: $primary-normal;
+    z-index: -1;
+    opacity: 0.9;
+
+    h1{
+    font-size: 40px;
+    color: #FFF;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    display: flex;
+    justify-content: center;
+    }
+
+}
+
+
+/*
+    ABOUT CHARMANDER
+*/
+
+.text-aboutCharmander{
+    border: 12px;
+    color: #FFF;
+    margin-right: 100px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.about-img{
+    height: 350px;
+    width: 350px;
+}
+
+.about-charmander{
+    display: flex;
+    margin-top: 25px;
+
+    img{
+        margin-top: 170px;
+        margin-left: 120px;
+        margin-right: 20px;
+        
+    }
+}
+
+h2{
+    font-size: 40px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    margin-right: 300px;
+    margin-top: 75px;
+}
+
+
+/*
+    ABOUT SQUIRTLE
+*/
+
+.text-aboutSquirtle{
+    margin-top: 20px;
+    border: 12px;
+    color: #FFF;
+    margin-right: 100px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.about-squirtle{
+    display: flex;
+    margin-top: 25px;
+
+    img{
+        margin-top: 170px;
+        margin-left: 120px;
+        margin-right: 20px;        
+    }
+}
+
+
+/*
+    ABOUT BULBASSAURO
+*/
+
+.text-aboutBulbassauro{
+    margin-top: 25px;
+    border: 12px;
+    color: #FFF;
+    margin-right: 100px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.about-bulbassauro{
+    display: flex;
+    margin-top: 25px;
+
+    img{
+        margin-top: 170px;
+        margin-left: 120px;
+        margin-right: 20px;        
+    }
+}
+
+/*
+    ABOUT PIKACHU
+*/
+
+.text-aboutPikachu{
+    border: 12px;
+    color: #FFF;
+    margin-right: 100px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.about-pikachu{
+    display: flex;
+    margin-top: 25px;
+
+    img{
+        margin-top: 170px;
+        margin-left: 120px;
+        margin-right: 20px;        
+    }
 }

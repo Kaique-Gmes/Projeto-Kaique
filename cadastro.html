@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="botao-cadastro">
-                <a href="#">
+                <a id="cadastrar-login" href="#">
                     <button class="botao-cadastrar" onclick="fazerCadastro()">Cadastrar</button>
                 </a>
             </div>
@@ -52,7 +52,7 @@
     var confirmarSenha = input_confirmarSenha.value;
 
     if(nome.length <= 3){
-        alert(`Nome precisa ser maiór que '3'`)
+        alert(`Nome precisa ser maior que '3'`)
     }
     else if(nick.length < 1){
         alert(`Insira um Nickname`)
@@ -60,7 +60,10 @@
     else if(email.indexOf('@') == -1 || email.indexOf('.') == -1){
         alert(`Email inválido`)
     }
-    else if(pokemonInicial != "Charmander" && pokemonInicial != "Bulbassauro" && pokemonInicial != "Squirtle" && pokemonInicial != "Pikachu"){
+    else if(pokemonInicial != "Charmander" && 
+    pokemonInicial != "Bulbassauro" && 
+    pokemonInicial != "Squirtle" && 
+    pokemonInicial != "Pikachu"){
         alert(`Insira um pokemon inicial válido`)
     }
     else if(senha.length < 8){

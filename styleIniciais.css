@@ -178,11 +178,61 @@ header {
   line-height: 150%;
 }
 
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 100px;
+}
+
+.footer-info {
+  text-align: left;
+}
+
+.footer-social {
+  text-align: right;
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-social li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  border-bottom: 2px solid #fff;
+}
+
 .bg-iniciais {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #003a70), url(assetics/iniciais\ 1.jpg);
+  background-color: #222;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #003a70);
   left: 0;
   top: 0;
   width: 100%;
@@ -194,11 +244,27 @@ header {
 }
 
 .navBar-iniciais {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
   background-color: #003a70;
+}
+
+.nav-botao {
+  font-size: 24px;
+  color: #FFF;
+}
+
+.nav-botao:hover {
+  cursor: pointer;
 }
 
 .texto-iniciais {
   font-size: 35px;
+  color: #FFF;
+  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 .hero-iniciais {
@@ -233,8 +299,11 @@ header {
 }
 
 .slide img {
-  width: 300px;
-  margin-left: 250px;
+  width: 280px;
+  height: 320px;
+  margin-left: 260px;
+  margin-top: 70px;
+  border-radius: 12px;
 }
 
 .manual-navigation {
@@ -246,7 +315,7 @@ header {
 }
 
 .manual-btn {
-  border: 2px solid white;
+  border: 2px solid black;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -258,7 +327,7 @@ header {
 }
 
 .manual-btn:hover {
-  background-color: white;
+  background-color: #003a70;
 }
 
 #radio1:checked ~ .first {
@@ -298,17 +367,131 @@ header {
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1 {
-  background-color: #FFF;
+  background-color: #003a70;
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2 {
-  background-color: #FFF;
+  background-color: #003a70;
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3 {
-  background-color: #FFF;
+  background-color: #003a70;
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4 {
-  background-color: #FFF;
+  background-color: #003a70;
+}
+
+/*
+    ABOUT POKEMONS
+*/
+.about-Pokemons {
+  background-color: #003a70;
+  z-index: -1;
+  opacity: 0.9;
+}
+.about-Pokemons h1 {
+  font-size: 40px;
+  color: #FFF;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+    ABOUT CHARMANDER
+*/
+.text-aboutCharmander {
+  border: 12px;
+  color: #FFF;
+  margin-right: 100px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.about-img {
+  height: 350px;
+  width: 350px;
+}
+
+.about-charmander {
+  display: flex;
+  margin-top: 25px;
+}
+.about-charmander img {
+  margin-top: 170px;
+  margin-left: 120px;
+  margin-right: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  margin-right: 300px;
+  margin-top: 75px;
+}
+
+/*
+    ABOUT SQUIRTLE
+*/
+.text-aboutSquirtle {
+  margin-top: 20px;
+  border: 12px;
+  color: #FFF;
+  margin-right: 100px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.about-squirtle {
+  display: flex;
+  margin-top: 25px;
+}
+.about-squirtle img {
+  margin-top: 170px;
+  margin-left: 120px;
+  margin-right: 20px;
+}
+
+/*
+    ABOUT BULBASSAURO
+*/
+.text-aboutBulbassauro {
+  margin-top: 25px;
+  border: 12px;
+  color: #FFF;
+  margin-right: 100px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.about-bulbassauro {
+  display: flex;
+  margin-top: 25px;
+}
+.about-bulbassauro img {
+  margin-top: 170px;
+  margin-left: 120px;
+  margin-right: 20px;
+}
+
+/*
+    ABOUT PIKACHU
+*/
+.text-aboutPikachu {
+  border: 12px;
+  color: #FFF;
+  margin-right: 100px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.about-pikachu {
+  display: flex;
+  margin-top: 25px;
+}
+.about-pikachu img {
+  margin-top: 170px;
+  margin-left: 120px;
+  margin-right: 20px;
 }/*# sourceMappingURL=styleIniciais.css.map */
