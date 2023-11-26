@@ -322,7 +322,8 @@ nav.left-bar.expandir .text-link {
 
 .padding-home {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 88vw;
   height: 100vh;
   background-color: #ffffff;
@@ -331,11 +332,59 @@ nav.left-bar.expandir .text-link {
   border-radius: 20px;
 }
 .padding-home .info-home a {
+  margin-right: 930px;
+  display: flex;
   height: 100%;
   width: 100%;
-  display: flex;
   margin-top: 12px;
   color: #202020;
   font-size: 50px;
   text-decoration: none;
-}/*# sourceMappingURL=quizHome.css.map */
+}
+.padding-home .minigame {
+  color: #202020;
+  text-shadow: 0.1em 0.1em 0.2em #fff;
+  font-size: 60px;
+  margin-top: 50px;
+}
+.padding-home .text-minigame h1 {
+  color: black;
+  margin-top: 30px;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  font-size: 40px;
+}
+.padding-home .comecar {
+  color: #FFF;
+  background-color: #003a70;
+  border-radius: 20px;
+  width: 180px;
+  height: 50px;
+  margin-top: 40px;
+}
+.padding-home .comecar:hover {
+  cursor: pointer;
+}
+.padding-home h2 {
+  color: #202020;
+}
+.padding-home #resultado {
+  display: flex;
+  margin-top: 30px;
+  font-size: 30px;
+  color: #202020;
+}
+.padding-home #radios {
+  color: #202020;
+}
+.padding-home .proximaPergunta {
+  color: #FFF;
+  background-color: #003a70;
+  border-radius: 20px;
+  width: 180px;
+  height: 50px;
+  margin-top: 40px;
+}
+.padding-home .proximaPergunta:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=quizJogo.css.map */

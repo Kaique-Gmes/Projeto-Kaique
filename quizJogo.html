@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="quizHome.css">
+    <link rel="stylesheet" href="quizJogo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
-    <title>Quiz - Home</title>
+    <title>Minigame</title>
 </head>
 <body>
     <div class="bg-quiz">
@@ -22,7 +22,7 @@
                             <span class="text-link">Usuário</span>
                         </a>
                     </li>
-                    <li class="item-menu ativo">
+                    <li class="item-menu">
                         <a href="http://127.0.0.1:5500/quizHome.html">
                             <span class="icons"><i class="bi bi-house-door"></i></span>
                             <span class="text-link">Home</span>
@@ -34,7 +34,7 @@
                             <span class="text-link">Dashboard</span>
                         </a>
                     </li>
-                    <li class="item-menu">
+                    <li class="item-menu ativo">
                         <a href="http://127.0.0.1:5500/quizJogo.html">
                             <span class="icons"><i class="bi bi-controller"></i></span>
                             <span class="text-link">Quiz</span>
@@ -64,9 +64,21 @@
                                 <span class="text-link">Usuário</span>
                             </a>
                         </div>
+                        <div class="text-minigame">
+                            <h1 class="minigame">Quiz Pokémon</h1>
+                            <h1>Com qual inicial você se identifica?<br>
+                                Responda para saber!
+                            </h1>
+                        </div>
+                        <div class="questao-container"></div>
+                            <button onclick="começar()" class="comecar">Começar quiz</button>
+                            <div id="resultado"></div>
+                            <div id="resposta"></div>
+                            <div class="radios" id="radios"></div>
+                        </div>
                     </div>
                     </div> 
             </div>
-            <script src="menu.js"></script>
+            <script src="Jogo.js"></script>
 </body>
 </html>

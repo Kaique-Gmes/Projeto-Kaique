@@ -117,7 +117,8 @@ nav.left-bar.expandir .text-link{
 
 .padding-home{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 88vw;
     height: 100vh;
     background-color: #ffffff;
@@ -127,19 +128,68 @@ nav.left-bar.expandir .text-link{
 
     .info-home{
         a{
+            margin-right: 930px;
+            display: flex;
             height: 100%;
             width: 100%;
-            display: flex;
             margin-top: 12px;
             color: #202020;
             font-size: 50px;
             text-decoration: none;
         }
     }
+    .minigame{
+        color: #202020;
+        text-shadow: 0.1em 0.1em 0.2em #fff;
+        font-size: 60px;
+        margin-top: 50px;
+    }
+    .text-minigame{
+        h1{
+            color: black;
+            margin-top: 30px;
+            text-align-last: center;
+            font-size: 40px;
+        }
+    }
 
+    .comecar{
+        color: #FFF;
+        background-color: $primary-normal;
+        border-radius: 20px;
+        width: 180px;
+        height: 50px;
+        margin-top: 40px;
+    }
+    .comecar:hover{
+        cursor: pointer;
+    }
+        h2{
+            color: #202020;
+        }
+
+    #resultado{
+        display: flex;
+        margin-top: 30px;
+        font-size: 30px;
+        color: #202020;
+    }
+
+    #radios{
+        color: #202020;
+    }
+
+    .proximaPergunta{
+        color: #FFF;
+        background-color: $primary-normal;
+        border-radius: 20px;
+        width: 180px;
+        height: 50px;
+        margin-top: 40px;
+    }
+    .proximaPergunta:hover{
+        cursor: pointer;
+    }
 }
-
-
-
 
 

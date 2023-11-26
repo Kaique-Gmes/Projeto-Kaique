@@ -322,7 +322,6 @@ nav.left-bar.expandir .text-link {
 
 .padding-home {
   display: flex;
-  justify-content: center;
   width: 88vw;
   height: 100vh;
   background-color: #ffffff;
@@ -335,7 +334,8 @@ nav.left-bar.expandir .text-link {
   width: 100%;
   display: flex;
   margin-top: 12px;
+  margin-left: 20px;
   color: #202020;
   font-size: 50px;
   text-decoration: none;
-}/*# sourceMappingURL=quizHome.css.map */
+}/*# sourceMappingURL=quizConfig.css.map */
