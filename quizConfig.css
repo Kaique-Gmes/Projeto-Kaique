@@ -22,24 +22,6 @@ header {
   height: 50px;
 }
 
-.header-logo:hover {
-  display: flex;
-  animation: translateY 0.8s infinite alternate;
-  cursor: pointer;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  margin-top: 14px;
-}
-
-@keyframes translateY {
-  from {
-    transform: translateY(0) scale(1);
-  }
-  to {
-    transform: translateY(-8px) scale(1.2);
-  }
-}
 .header-button {
   border: 1px solid #FFFFFF;
   padding: 8px 24px;
@@ -80,7 +62,7 @@ header {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #003a70), url(../assetics/pikachu.jpg);
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #003a70), url(/assets/pikachu\ -\ Copia.jpg);
   left: 0;
   top: 0;
   width: 100%;
@@ -124,7 +106,6 @@ header {
 }
 
 .about {
-  overflow: hidden;
   color: #FFFFFF;
   background-color: #003a70;
 }
@@ -153,7 +134,6 @@ header {
 }
 
 .about2 {
-  overflow: hidden;
   color: #FFFFFF;
   background-color: #003a70;
 }
@@ -166,6 +146,7 @@ header {
 }
 .about-content2 img {
   max-width: 200;
+  max-height: 450px;
 }
 
 .about-content2 div {
@@ -314,6 +295,7 @@ nav.left-bar.expandir .text-link {
 }
 
 .content-text {
+  display: flex;
   margin-top: 20px;
   width: 100%;
 }
@@ -322,6 +304,11 @@ nav.left-bar.expandir .text-link {
   justify-content: center;
   font-size: 45px;
   margin-left: 85px;
+}
+.content-text img {
+  margin-left: 100px;
+  margin-right: 248px;
+  height: 50px;
 }
 
 .padding-home {
@@ -338,7 +325,7 @@ nav.left-bar.expandir .text-link {
   width: 100%;
   display: flex;
   margin-top: 12px;
-  margin-left: 20px;
+  margin-left: 14px;
   color: #202020;
   font-size: 50px;
   text-decoration: none;

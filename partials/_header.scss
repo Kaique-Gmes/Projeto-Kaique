@@ -17,24 +17,6 @@ header{
     }
 }
 
-.header-logo:hover{
-    display: flex;
-    animation: translateY 0.8s infinite alternate;
-    cursor: pointer;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    margin-top: 14px;
-}
-
-@keyframes translateY {
-    from{
-        transform: translateY(0) scale(1);
-    }
-    to{
-        transform: translateY(-8px) scale(1.2);
-    }
-}
 
 .header-button{
 border: 1px solid $white-normal;

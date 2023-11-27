@@ -15,7 +15,7 @@
     content: '';
     display: block;
     position: absolute;
-    background-image: linear-gradient(to bottom,rgba(6, 18, 30, 0.1), $primary-normal), url(../assetics/pikachu.jpg);
+    background-image: linear-gradient(to bottom,rgba(6, 18, 30, 0.1), $primary-normal), url(/assets/pikachu\ -\ Copia.jpg);
     left: 0;
     top: 0;
     width: 100%;
@@ -62,7 +62,6 @@
 
 // ABOUT
 .about{
-    overflow: hidden;
     color: $white-normal;
     background-color: $primary-dark;
 }
@@ -93,11 +92,7 @@
     }
 }
 
-
-
-
 .about2{
-    overflow: hidden;
     color: $white-normal;
     background-color: $primary-dark;
 }
@@ -109,6 +104,7 @@
     padding: 34px, 14px, 64px, 14px;
     img{
         max-width: 200;
+        max-height: 450px;
     }
 }
 

@@ -24,7 +24,7 @@ btnExp.addEventListener('click', function () {
 
 
 
-var contador = 1;
+var contador = 0;
 var questao = ["Qual seu tipo favorito?", "Qual cor você prefere?", "O que você gosta de fazer nas horas vagas?", "Como você se define?", "Qual é a sua comida favorita?"]
 var charmander = 0
 var squirtle = 0
@@ -186,7 +186,7 @@ function resposta() {
 
 function reset() {
     resetar.innerHTML = ``;
-    contador = 1;
+    contador = 0;
     charmander = 0;
     squirtle = 0;
     bulbassauro = 0;
