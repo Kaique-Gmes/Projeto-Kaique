@@ -17,6 +17,10 @@ header {
 .header-icons {
   display: flex;
 }
+.header-icons img {
+  margin-top: 8px;
+  height: 50px;
+}
 
 .header-logo:hover {
   display: flex;
@@ -377,6 +381,10 @@ nav.left-bar.expandir .text-link {
 .padding-home #radios {
   color: #202020;
 }
+.padding-home .content-proximapergunta {
+  display: flex;
+  justify-content: center;
+}
 .padding-home .proximaPergunta {
   color: #FFF;
   background-color: #003a70;
@@ -387,4 +395,13 @@ nav.left-bar.expandir .text-link {
 }
 .padding-home .proximaPergunta:hover {
   cursor: pointer;
+}
+.padding-home .content-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.padding-home .content-reset h2 {
+  font-size: 30px;
 }/*# sourceMappingURL=quizJogo.css.map */

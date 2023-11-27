@@ -164,6 +164,7 @@ nav.left-bar.expandir .text-link{
     .comecar:hover{
         cursor: pointer;
     }
+
         h2{
             color: #202020;
         }
@@ -179,6 +180,11 @@ nav.left-bar.expandir .text-link{
         color: #202020;
     }
 
+.content-proximapergunta{
+    display: flex;
+    justify-content: center;
+}
+
     .proximaPergunta{
         color: #FFF;
         background-color: $primary-normal;
@@ -189,6 +195,17 @@ nav.left-bar.expandir .text-link{
     }
     .proximaPergunta:hover{
         cursor: pointer;
+    }
+
+    .content-reset{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2{
+            font-size: 30px;
+        }
+        
     }
 }
 

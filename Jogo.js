@@ -1,13 +1,13 @@
 var menuItem = document.querySelectorAll('.item-menu')
 
-function selectLink(){
-    menuItem.forEach((item)=>
-    item.classList.remove('ativo')
+function selectLink() {
+    menuItem.forEach((item) =>
+        item.classList.remove('ativo')
     )
     this.classList.add('ativo')
 }
 
-menuItem.forEach((item)=>
+menuItem.forEach((item) =>
     item.addEventListener('click', selectLink)
 )
 
@@ -16,7 +16,7 @@ menuItem.forEach((item)=>
 var btnExp = document.querySelector('#btn-exp')
 var leftBar = document.querySelector('.left-bar')
 
-btnExp.addEventListener('click', function(){
+btnExp.addEventListener('click', function () {
     leftBar.classList.toggle('expandir')
 })
 
@@ -30,13 +30,13 @@ var charmander = 0
 var squirtle = 0
 var bulbassauro = 0
 var pikachu = 0
-function começar(){
-            resultado.innerHTML =
-            `
+function começar() {
+    resultado.innerHTML =
+        `
             ${questao[contador]}
             `
-            radios.innerHTML =
-                `
+    radios.innerHTML =
+        `
                     Fogo
                 <input type="radio" id="radio1" name="radio" value="radio1">
                     Água
@@ -47,26 +47,26 @@ function começar(){
                 <input type="radio" id="radio4" name="radio" value="radio4">   
                 <br>    
                 <br>
-                <button onclick="proximaPergunta()" class="comecar">Proxima pergunta</button>
+                <div class="content-proximapergunta">
+                <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
+            </div>
                 `
 }
 
-function proximaPergunta(){
-
-    
+function proximaPergunta() {
     const selectedOption = document.querySelector('input[name="radio"]:checked');
 
-     if (selectedOption) {
-        charmander += 2
+    if (selectedOption) {
+        charmander++
     }
-    while(contador < 5){
-        if(contador == 1){
+    while (contador < 5) {
+        if (contador == 1) {
             resultado.innerHTML =
-            `
+                `
             ${questao[contador]}
             `
             radios.innerHTML =
-            `
+                `
                     Vermelho
                 <input type="radio" id="radio1" name="radio" value="radio1">
                     Azul
@@ -77,15 +77,17 @@ function proximaPergunta(){
                 <input type="radio" id="radio4" name="radio" value="radio4">
                 <br>    
                 <br>
-                <button onclick="proximaPergunta()" class="comecar">Proxima pergunta</button>
-            `   
-        }else if(contador == 2){
-            resultado.innerHTML =
+                <div class="content-proximapergunta">
+                <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
+            </div>
             `
+        } else if (contador == 2) {
+            resultado.innerHTML =
+                `
             ${questao[contador]}
             `
             radios.innerHTML =
-            ` 
+                ` 
                     Treinar
                 <input type="radio" id="radio1" name="radio">
                     Jogar
@@ -96,15 +98,17 @@ function proximaPergunta(){
                 <input type="radio" id="radio4" name="radio">
                 <br>    
                 <br>
-                <button onclick="proximaPergunta()" class="comecar">Proxima pergunta</button>
+                <div class="content-proximapergunta">
+                <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
+            </div>
             `
-        }else if(contador == 3){
+        } else if (contador == 3) {
             resultado.innerHTML =
-            `
+                `
             ${questao[contador]}
             `
             radios.innerHTML =
-            ` 
+                ` 
                     Aventureiro
                 <input type="radio" id="radio1" name="radio">
                     Bincalhão
@@ -115,15 +119,17 @@ function proximaPergunta(){
                 <input type="radio" id="radio4" name="radio">
                 <br>    
                 <br>
-                <button onclick="proximaPergunta()" class="comecar">Proxima pergunta</button>
+                <div class="content-proximapergunta">
+                <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
+            </div>
             `
-        }else if(contador == 4){
+        } else if (contador == 4) {
             resultado.innerHTML =
-            `
+                `
             ${questao[contador]}
             `
             radios.innerHTML =
-            ` 
+                ` 
                     Carne
                 <input type="radio" id="radio1" name="radio">
                     Peixe
@@ -134,45 +140,55 @@ function proximaPergunta(){
                 <input type="radio" id="radio4" name="radio">
             <br>
             <br>
-            <button onclick="resposta()" class="comecar">Resposta</button>
+            <div class="content-proximapergunta">
+            <button onclick="resposta()" class="proximaPergunta">Resposta</button>
+        </div>
             `
         }
-        contador ++
-        if(contador >= 5){
+        contador++
+        if (contador >= 5) {
             contador == 1
         }
         break
     }
 }
 
-function resposta(){
+function resposta() {
     radios.innerHTML = ''
-    if(charmander > squirtle || charmander > bulbassauro || charmander > pikachu){
-        resultado.innerHTML = 
-        `Você se idêntificou com o Charmander!
+    //Charmander >
+    if (charmander > squirtle || charmander > bulbassauro || charmander > pikachu) {
+        resultado.innerHTML =
+            `
+        <div class="content-reset" id="resetar">
+        <h2>Você se idêntificou com o Charmander!</h2>
+        <button onclick="reset()" class="proximaPergunta">Resetar quiz</button>
+        </div>`
+    }
+    //Squirtle >
+    else if (squirtle > charmander || squirtle > bulbassauro || squirtle > pikachu) {
+        resultado.innerHTML =
+            `Você se idêntificou com o Squirtle!
         <button onclick="reset()" class="comecar">Resetar quiz</button>`
-    }else if(squirtle > charmander || squirtle > bulbassauro || squirtle > pikachu){
-        resultado.innerHTML = 
-        `Você se idêntificou com o Squirtle!
+    }
+    //Bulbassauro >
+    else if (bulbassauro > charmander || bulbassauro > squirtle || bulbassauro > pikachu) {
+        resultado.innerHTML =
+            `Você se idêntificou com o Bulbassauro!
         <button onclick="reset()" class="comecar">Resetar quiz</button>`
-    }else if(bulbassauro > charmander || bulbassauro > squirtle || bulbassauro > pikachu){
-        resultado.innerHTML = 
-        `Você se idêntificou com o Bulbassauro!
-        <button onclick="reset()" class="comecar">Resetar quiz</button>`
-    }else if(pikachu > charmander || pikachu > squirtle || pikachu > bulbassauro){
-        resultado.innerHTML = 
-        `Você se idêntificou com o Pikachu!
+    }
+    //Pikachu >
+    else if (pikachu > charmander || pikachu > squirtle || pikachu > bulbassauro) {
+        resultado.innerHTML =
+            `Você se idêntificou com o Pikachu!
         <button onclick="reset()" class="comecar">Resetar quiz</button>`
     }
 }
 
-function reset(){
-    var contador = 1;
-    var questao = ["Qual seu tipo favorito?", "Qual cor você prefere?", "O que você gosta de fazer nas horas vagas?", "Como você se define?", "Qual é a sua comida favorita?"]
-    var charmander = 0
-    var squirtle = 0
-    var bulbassauro = 0
-    var pikachu = 0
-    var contador = 1
-    resultado.innerHTML = ""
+function reset() {
+    resetar.innerHTML = ``;
+    contador = 1;
+    charmander = 0;
+    squirtle = 0;
+    bulbassauro = 0;
+    pikachu = 0;
 }

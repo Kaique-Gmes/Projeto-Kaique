@@ -18,6 +18,10 @@ header {
 .header-icons {
   display: flex;
 }
+.header-icons img {
+  margin-top: 8px;
+  height: 50px;
+}
 
 .header-logo:hover {
   display: flex;
@@ -249,7 +253,14 @@ footer {
   justify-content: space-between;
   width: 100%;
   position: fixed;
-  background-color: #003a70;
+}
+
+.header-icons {
+  display: flex;
+}
+.header-icons img {
+  margin-top: 8px;
+  height: 50px;
 }
 
 .nav-botao {
