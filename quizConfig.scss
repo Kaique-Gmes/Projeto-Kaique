@@ -99,7 +99,7 @@ nav.left-bar.expandir .text-link{
 
 }
 
-.content-home{
+.content-config{
     color: #FFF;
     flex-direction: column;
 }
@@ -121,18 +121,47 @@ nav.left-bar.expandir .text-link{
     }
 }
 
-.padding-home{
+
+
+.padding-config{
     display: flex;
+    flex-direction: column;
     width: 88vw;
-    height: 100vh;
+    height: 90vh;
     background-color: #ffffff;
     margin-top: 70px;
     margin-left: 110px;
     border-radius: 20px;
+    justify-content: space-evenly;
+    justify-content: start;
 
-    .info-home{
+    .informacao-config{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+
+    .info-config{
+
+        span.icons1{
+            margin-top: 0px;
+            
+        }
+
+        span.icons2{
+            margin-top: 40px;
+        }
+
+        span.icons3{
+            margin-top: 80px;
+        }
+
+        span.icons4{
+            margin-top: 120px;
+        }
+
         a{
-            height: 100%;
+            height: 30px;
             width: 100%;
             display: flex;
             margin-top: 12px;
@@ -142,4 +171,62 @@ nav.left-bar.expandir .text-link{
             text-decoration: none;
         }
     }
+
+        a{
+            height: 30px;
+            width: 100%;
+            display: flex;
+            margin-top: 1px;
+            margin-left: 14px;
+            color: #202020;
+            font-size: 50px;
+            text-decoration: none;
+        }
+    }
+
+    .footer-config{
+        width: 450px;
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h1{
+            
+            color: #202020;
+        }
+        
+        .botao-avaliar{
+        color: #FFF;
+        background-color: $primary-normal;
+        border-radius: 20px;
+        width: 180px;
+        height: 50px;
+        margin-top: 40px;
+        }
+        .botao-avaliar:hover{
+            cursor: pointer;
+        }
+
+        p{
+            color: #202020;
+        }
+
+        .botao-config{
+
+            button.botao-refazer{
+            color: #FFF;
+            background-color: $primary-normal;
+            border-radius: 20px;
+            width: 180px;
+            height: 50px;
+            margin-top: 40px;
+            }
+
+            button.botao-refazer:hover{
+                cursor: pointer;
+            }
+    }
+    
 }
