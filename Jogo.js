@@ -37,29 +37,44 @@ function começar() {
             `
     radios.innerHTML =
         `
-                    Fogo
-                <input type="radio" id="radio1" name="radio" value="radio1">
-                    Água
-                <input type="radio" id="radio2" name="radio" value="radio2">
-                    Planta
-                <input type="radio" id="radio3" name="radio" value="radio3">
-                    Elétrico
-                <input type="radio" id="radio4" name="radio" value="radio4">   
+        <input type="radio" id="radio1" name="radio" value="radio1">
+        Fogo
+        <input type="radio" id="radio2" name="radio" value="radio2">
+        Água
+        <input type="radio" id="radio3" name="radio" value="radio3">
+        Planta
+        <input type="radio" id="radio4" name="radio" value="radio4">   
+        Elétrico
                 <br>    
                 <br>
                 <div class="content-proximapergunta">
                 <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
             </div>
                 `
+                contador ++
 }
 
 function proximaPergunta() {
-    const selectedOption = document.querySelector('input[name="radio"]:checked');
+    const selectedOption1 = document.querySelector('input[value="radio1"]:checked');
+    const selectedOption2 = document.querySelector('input[value="radio2"]:checked');
+    const selectedOption3 = document.querySelector('input[value="radio3"]:checked');
+    const selectedOption4 = document.querySelector('input[value="radio4"]:checked');
 
-    if (selectedOption) {
+    if (selectedOption1) {
         charmander++
     }
+    if (selectedOption2) {
+        squirtle++
+    }
+    if (selectedOption3) {
+        bulbassauro++
+    }
+    if (selectedOption4) {
+        pikachu++
+    }
+    
     while (contador < 5) {
+
         if (contador == 1) {
             resultado.innerHTML =
                 `
@@ -67,14 +82,14 @@ function proximaPergunta() {
             `
             radios.innerHTML =
                 `
-                    Vermelho
                 <input type="radio" id="radio1" name="radio" value="radio1">
-                    Azul
+                Vermelho
                 <input type="radio" id="radio2" name="radio" value="radio2">
-                    Verde
+                Azul
                 <input type="radio" id="radio3" name="radio" value="radio3">
-                    Amarelo
+                Verde
                 <input type="radio" id="radio4" name="radio" value="radio4">
+                Amarelo
                 <br>    
                 <br>
                 <div class="content-proximapergunta">
@@ -88,14 +103,14 @@ function proximaPergunta() {
             `
             radios.innerHTML =
                 ` 
-                    Treinar
-                <input type="radio" id="radio1" name="radio">
-                    Jogar
-                <input type="radio" id="radio2" name="radio">
-                    Dormir
-                <input type="radio" id="radio3" name="radio">
-                    Comer
-                <input type="radio" id="radio4" name="radio">
+                <input type="radio" id="radio1" name="radio" value="radio1">
+                Treinar
+                <input type="radio" id="radio2" name="radio" value="radio2">
+                Jogar
+                <input type="radio" id="radio3" name="radio" value="radio3">
+                Dormir
+                <input type="radio" id="radio4" name="radio" value="radio4">
+                Comer
                 <br>    
                 <br>
                 <div class="content-proximapergunta">
@@ -109,14 +124,14 @@ function proximaPergunta() {
             `
             radios.innerHTML =
                 ` 
-                    Aventureiro
-                <input type="radio" id="radio1" name="radio">
-                    Bincalhão
-                <input type="radio" id="radio2" name="radio">
-                    Calmo
-                <input type="radio" id="radio3" name="radio">
-                    Energético
-                <input type="radio" id="radio4" name="radio">
+                <input type="radio" id="radio1" name="radio" value="radio1">
+                Aventureiro
+                <input type="radio" id="radio2" name="radio" value="radio2">
+                Bincalhão
+                <input type="radio" id="radio3" name="radio" value="radio3">
+                Calmo
+                <input type="radio" id="radio4" name="radio" value="radio4">
+                Energético
                 <br>    
                 <br>
                 <div class="content-proximapergunta">
@@ -130,30 +145,48 @@ function proximaPergunta() {
             `
             radios.innerHTML =
                 ` 
-                    Carne
-                <input type="radio" id="radio1" name="radio">
-                    Peixe
-                <input type="radio" id="radio2" name="radio">
-                    Folhas
-                <input type="radio" id="radio3" name="radio">
-                    Doces
-                <input type="radio" id="radio4" name="radio">
+                <input type="radio" id="radio1" name="radio" value="radio1">
+                Carne
+                <input type="radio" id="radio2" name="radio" value="radio2">
+                Peixe
+                <input type="radio" id="radio3" name="radio" value="radio3">
+                Folhas
+                <input type="radio" id="radio4" name="radio" value="radio4">
+                Doces
             <br>
             <br>
             <div class="content-proximapergunta">
             <button onclick="resposta()" class="proximaPergunta">Resposta</button>
         </div>
             `
+        }if(contador >= 5){
+            contador =1
         }
         contador++
-        if (contador >= 5) {
-            contador == 1
-        }
         break
     }
 }
 
 function resposta() {
+
+    const selectedOption1 = document.querySelector('input[value="radio1"]:checked');
+    const selectedOption2 = document.querySelector('input[value="radio2"]:checked');
+    const selectedOption3 = document.querySelector('input[value="radio3"]:checked');
+    const selectedOption4 = document.querySelector('input[value="radio4"]:checked');
+
+    if (selectedOption1) {
+        charmander++
+    }
+    if (selectedOption2) {
+        squirtle++
+    }
+    if (selectedOption3) {
+        bulbassauro++
+    }
+    if (selectedOption4) {
+        pikachu++
+    }
+
     radios.innerHTML = ''
     //Charmander >
     if (charmander > squirtle || charmander > bulbassauro || charmander > pikachu) {
@@ -165,22 +198,34 @@ function resposta() {
         </div>`
     }
     //Squirtle >
-    else if (squirtle > charmander || squirtle > bulbassauro || squirtle > pikachu) {
+    if (squirtle > charmander || squirtle > bulbassauro || squirtle > pikachu) {
+        radios.innerHTML  = ""
         resultado.innerHTML =
-            `Você se idêntificou com o Squirtle!
-        <button onclick="reset()" class="comecar">Resetar quiz</button>`
+        `
+        <div class="content-reset" id="resetar">
+        <h2>Você se idêntificou com o Squirtle!</h2>
+        <button onclick="reset()" class="proximaPergunta">Resetar quiz</button>
+        </div>`
     }
     //Bulbassauro >
-    else if (bulbassauro > charmander || bulbassauro > squirtle || bulbassauro > pikachu) {
+    if (bulbassauro > charmander || bulbassauro > squirtle || bulbassauro > pikachu) {
+        radios.innerHTML  = ""
         resultado.innerHTML =
-            `Você se idêntificou com o Bulbassauro!
-        <button onclick="reset()" class="comecar">Resetar quiz</button>`
+        `
+        <div class="content-reset" id="resetar">
+        <h2>Você se idêntificou com o Bulbassauro!</h2>
+        <button onclick="reset()" class="proximaPergunta">Resetar quiz</button>
+        </div>`
     }
     //Pikachu >
-    else if (pikachu > charmander || pikachu > squirtle || pikachu > bulbassauro) {
+    if (pikachu > charmander || pikachu > squirtle || pikachu > bulbassauro) {
+        radios.innerHTML  = ""
         resultado.innerHTML =
-            `Você se idêntificou com o Pikachu!
-        <button onclick="reset()" class="comecar">Resetar quiz</button>`
+        `
+        <div class="content-reset" id="resetar">
+        <h2>Você se idêntificou com o Pikachu!</h2>
+        <button onclick="reset()" class="proximaPergunta">Resetar quiz</button>
+        </div>`
     }
 }
 
