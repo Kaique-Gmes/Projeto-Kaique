@@ -90,7 +90,7 @@ function proximaPergunta() {
                 Verde
                 <input type="radio" id="radio4" name="radio" value="radio4">
                 Amarelo
-                <br>    
+                <br>
                 <br>
                 <div class="content-proximapergunta">
                 <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
@@ -102,7 +102,7 @@ function proximaPergunta() {
             ${questao[contador]}
             `
             radios.innerHTML =
-                ` 
+                `
                 <input type="radio" id="radio1" name="radio" value="radio1">
                 Treinar
                 <input type="radio" id="radio2" name="radio" value="radio2">
@@ -111,7 +111,7 @@ function proximaPergunta() {
                 Dormir
                 <input type="radio" id="radio4" name="radio" value="radio4">
                 Comer
-                <br>    
+                <br>
                 <br>
                 <div class="content-proximapergunta">
                 <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
@@ -189,7 +189,7 @@ function resposta() {
 
     radios.innerHTML = ''
     //Charmander >
-    if (charmander > squirtle || charmander > bulbassauro || charmander > pikachu) {
+    if (charmander > squirtle && charmander > bulbassauro && charmander > pikachu) {
         resultado.innerHTML =
             `
         <div class="content-reset" id="resetar">
@@ -198,7 +198,7 @@ function resposta() {
         </div>`
     }
     //Squirtle >
-    if (squirtle > charmander || squirtle > bulbassauro || squirtle > pikachu) {
+    if (squirtle > charmander && squirtle > bulbassauro && squirtle > pikachu) {
         radios.innerHTML  = ""
         resultado.innerHTML =
         `
@@ -208,7 +208,7 @@ function resposta() {
         </div>`
     }
     //Bulbassauro >
-    if (bulbassauro > charmander || bulbassauro > squirtle || bulbassauro > pikachu) {
+    if (bulbassauro > charmander && bulbassauro > squirtle && bulbassauro > pikachu) {
         radios.innerHTML  = ""
         resultado.innerHTML =
         `
@@ -218,7 +218,7 @@ function resposta() {
         </div>`
     }
     //Pikachu >
-    if (pikachu > charmander || pikachu > squirtle || pikachu > bulbassauro) {
+    if (pikachu > charmander && pikachu > squirtle && pikachu > bulbassauro) {
         radios.innerHTML  = ""
         resultado.innerHTML =
         `
