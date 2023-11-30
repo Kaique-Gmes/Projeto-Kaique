@@ -113,17 +113,16 @@ nav.left-bar.expandir .text-link {
   border-radius: 20px;
 }
 .padding-home .bg-home {
-  border-radius: 20px;
+  border-radius: 40px;
   width: 1170px;
-  height: 130vh;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-image: url(../../assets/gengar.png);
+  height: 200vh;
+  background-image: url(../../assets/gengar3.jpg);
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .padding-home .bg-home .nav-home h1 {
-  margin-top: 80px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
   font-size: 45px;
@@ -133,7 +132,7 @@ nav.left-bar.expandir .text-link {
   justify-content: space-evenly;
 }
 .padding-home .bg-home .botoes-home .img13 {
-  margin-top: 100px;
+  margin-top: 200px;
   border-radius: 40px;
   height: 500px;
   width: 250px;
@@ -155,7 +154,7 @@ nav.left-bar.expandir .text-link {
   width: 250px;
 }
 .padding-home .bg-home .botoes-home .img2 {
-  margin-top: 40px;
+  margin-top: 80px;
   border-radius: 40px;
   height: 500px;
   width: 250px;
