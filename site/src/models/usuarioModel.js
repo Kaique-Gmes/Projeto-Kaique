@@ -16,7 +16,7 @@ function cadastrar(nome, nick, email, pokemon, senha) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO treinador (nome, nick, email, senha, pokemon) VALUES ('${nome}', '${nick}', '${email}', '${senha}', '${pokemon}');
+        INSERT INTO treinador (nome, nick, email, pokemon, senha) VALUES ('${nome}', '${nick}', '${email}', '${pokemon}', '${senha}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

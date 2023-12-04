@@ -46,8 +46,8 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var nick = req.body.nickServer;
     var email = req.body.emailServer;
-    var senha = req.body.senhaServer;
     var pokemon = req.body.pokemonServer;
+    var senha = req.body.senhaServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
