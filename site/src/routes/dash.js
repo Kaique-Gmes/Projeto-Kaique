@@ -3,11 +3,11 @@ var router = express.Router();
 
 var dashController = require("../controllers/dashController");
 
-router.get("/iniciaisEscolhidos", function (req, res) {
+router.get("/escolhidos", function (req, res) {
     dashController.caesZonas(req, res);
 });
 
-router.get("/iniciaisIdentificados", function (req, res) {
+router.get("/identificados", function (req, res) {
     dashController.caesSexo(req, res);
 });
 
