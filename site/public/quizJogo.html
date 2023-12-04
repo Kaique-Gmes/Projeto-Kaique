@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="quizJogo.css">
+    <link rel="stylesheet" href="css/quizJogo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
     <title>Minigame</title>
@@ -48,7 +48,7 @@
         <div class="content-quiz">
             <div class="content-home">
                 <div class="content-text">
-                    <a href="indexPagina.html">
+                    <a href="index.html">
                         <img src="../../assets/Group 80.png">
                     </a>
                     <h1>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="padding-home">
                     <div class="info-home">
-                        <a href="#">
+                        <a href="quizUser.html">
                             <span class="icons"><i class="bi bi-person-circle"></i></span>
                             <span class="text-link">Usuário</span>
                         </a>
@@ -77,7 +77,285 @@
             </div>
         </div>
     </div>
-    <script src="Jogo.js"></script>
-</body>
+    <script>
+        var menuItem = document.querySelectorAll('.item-menu')
 
+function selectLink() {
+    menuItem.forEach((item) =>
+        item.classList.remove('ativo')
+    )
+    this.classList.add('ativo')
+}
+
+menuItem.forEach((item) =>
+    item.addEventListener('click', selectLink)
+)
+
+//EXPANDIR O MENU
+
+var btnExp = document.querySelector('#btn-exp')
+var leftBar = document.querySelector('.left-bar')
+
+btnExp.addEventListener('click', function () {
+    leftBar.classList.toggle('expandir')
+})
+
+
+
+
+var jogoVar = ""
+var contador = 0;
+var questao = ["Qual seu tipo favorito?", "Qual cor você prefere?", "O que você gosta de fazer nas horas vagas?", "Como você se define?", "Qual é a sua comida favorita?"]
+var charmander = 0
+var squirtle = 0
+var bulbassauro = 0
+var pikachu = 0
+function começar() {
+    resultado.innerHTML =
+        `
+            ${questao[contador]}
+            `
+    radios.innerHTML =
+        `
+        <input type="radio" id="radio1" name="radio" value="radio1">
+        Fogo
+        <input type="radio" id="radio2" name="radio" value="radio2">
+        Água
+        <input type="radio" id="radio3" name="radio" value="radio3">
+        Planta
+        <input type="radio" id="radio4" name="radio" value="radio4">   
+        Elétrico
+                <br>    
+                <br>
+                <div class="content-proximapergunta">
+                <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
+            </div>
+                `
+                contador ++
+}
+
+function proximaPergunta() {
+    const selectedOption1 = document.querySelector('input[value="radio1"]:checked');
+    const selectedOption2 = document.querySelector('input[value="radio2"]:checked');
+    const selectedOption3 = document.querySelector('input[value="radio3"]:checked');
+    const selectedOption4 = document.querySelector('input[value="radio4"]:checked');
+
+    if (selectedOption1) {
+        charmander++
+    }
+    if (selectedOption2) {
+        squirtle++
+    }
+    if (selectedOption3) {
+        bulbassauro++
+    }
+    if (selectedOption4) {
+        pikachu++
+    }
+    
+    while (contador < 5) {
+
+        if (contador == 1) {
+            resultado.innerHTML =
+                `
+            ${questao[contador]}
+            `
+            radios.innerHTML =
+                `
+                <input type="radio" id="radio1" name="radio" value="radio1">
+                Vermelho
+                <input type="radio" id="radio2" name="radio" value="radio2">
+                Azul
+                <input type="radio" id="radio3" name="radio" value="radio3">
+                Verde
+                <input type="radio" id="radio4" name="radio" value="radio4">
+                Amarelo
+                <br>
+                <br>
+                <div class="content-proximapergunta">
+                <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
+            </div>
+            `
+        } else if (contador == 2) {
+            resultado.innerHTML =
+                `
+            ${questao[contador]}
+            `
+            radios.innerHTML =
+                `
+                <input type="radio" id="radio1" name="radio" value="radio1">
+                Treinar
+                <input type="radio" id="radio2" name="radio" value="radio2">
+                Jogar
+                <input type="radio" id="radio3" name="radio" value="radio3">
+                Dormir
+                <input type="radio" id="radio4" name="radio" value="radio4">
+                Comer
+                <br>
+                <br>
+                <div class="content-proximapergunta">
+                <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
+            </div>
+            `
+        } else if (contador == 3) {
+            resultado.innerHTML =
+                `
+            ${questao[contador]}
+            `
+            radios.innerHTML =
+                ` 
+                <input type="radio" id="radio1" name="radio" value="radio1">
+                Aventureiro
+                <input type="radio" id="radio2" name="radio" value="radio2">
+                Bincalhão
+                <input type="radio" id="radio3" name="radio" value="radio3">
+                Calmo
+                <input type="radio" id="radio4" name="radio" value="radio4">
+                Energético
+                <br>    
+                <br>
+                <div class="content-proximapergunta">
+                <button onclick="proximaPergunta()" class="proximaPergunta">Proxima pergunta</button>
+            </div>
+            `
+        } else if (contador == 4) {
+            resultado.innerHTML =
+                `
+            ${questao[contador]}
+            `
+            radios.innerHTML =
+                ` 
+                <input type="radio" id="radio1" name="radio" value="radio1">
+                Carne
+                <input type="radio" id="radio2" name="radio" value="radio2">
+                Peixe
+                <input type="radio" id="radio3" name="radio" value="radio3">
+                Folhas
+                <input type="radio" id="radio4" name="radio" value="radio4">
+                Doces
+            <br>
+            <br>
+            <div class="content-proximapergunta">
+            <button onclick="responder()" class="proximaPergunta">Resposta</button>
+        </div>
+            `
+        }if(contador >= 5){
+            contador =1
+        }
+        contador++
+        break
+    }
+}
+
+function responder() {
+
+    const selectedOption1 = document.querySelector('input[value="radio1"]:checked');
+    const selectedOption2 = document.querySelector('input[value="radio2"]:checked');
+    const selectedOption3 = document.querySelector('input[value="radio3"]:checked');
+    const selectedOption4 = document.querySelector('input[value="radio4"]:checked');
+
+    if (selectedOption1) {
+        charmander++
+    }
+    if (selectedOption2) {
+        squirtle++
+    }
+    if (selectedOption3) {
+        bulbassauro++
+    }
+    if (selectedOption4) {
+        pikachu++
+    }
+
+    radios.innerHTML = ''
+    //Charmander >
+    if (charmander > squirtle && charmander > bulbassauro && charmander > pikachu) {
+        jogoVar = "Charmander"
+        resultado.innerHTML =
+            `
+        <div class="content-reset" id="resetar">
+        <h2>Você se idêntificou com o Charmander!</h2>
+        <button onclick="reset()" class="proximaPergunta">Resetar quiz</button>
+        </div>`
+    }
+    //Squirtle >
+    if (squirtle > charmander && squirtle > bulbassauro && squirtle > pikachu) {
+        jogoVar = "Squirtle"
+        radios.innerHTML  = ""
+        resultado.innerHTML =
+        `
+        <div class="content-reset" id="resetar">
+        <h2>Você se idêntificou com o Squirtle!</h2>
+        <button onclick="reset()" class="proximaPergunta">Resetar quiz</button>
+        </div>`
+    }
+    //Bulbassauro >
+    if (bulbassauro > charmander && bulbassauro > squirtle && bulbassauro > pikachu) {
+        jogoVar = "Bulbassauro"
+        radios.innerHTML  = ""
+        resultado.innerHTML =
+        `
+        <div class="content-reset" id="resetar">
+        <h2>Você se idêntificou com o Bulbassauro!</h2>
+        <button onclick="reset()" class="proximaPergunta">Resetar quiz</button>
+        </div>`
+    }
+    //Pikachu >
+    if (pikachu > charmander && pikachu > squirtle && pikachu > bulbassauro) {
+        jogoVar = "Pikachu"
+        radios.innerHTML  = ""
+        resultado.innerHTML =
+        `
+        <div class="content-reset" id="resetar">
+        <h2>Você se idêntificou com o Pikachu!</h2>
+        <button onclick="reset()" class="proximaPergunta">Resetar quiz</button>
+        </div>`
+    }
+
+    fetch("/jogo/responder", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    jogoServer: jogoVar
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("resposta: ", resposta);
+
+                    if (resposta.ok) {
+                            alert(`Cadastro realizado com sucesso!`)
+
+                         setTimeout(() => {
+                             window.location = "quizUser.html";
+                         }, "2000");
+                        // limparFormulario();
+                        // finalizarAguardar();
+                    } else {
+                        throw "Houve um erro ao tentar realizar o cadastro!";
+                    }
+                })
+                .catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                    // finalizarAguardar();
+                });
+
+            return false;
+
+}
+
+function reset() {
+    resetar.innerHTML = ``;
+    jogoVar = ""
+    contador = 0;
+    charmander = 0;
+    squirtle = 0;
+    bulbassauro = 0;
+    pikachu = 0;
+}
+    </script>
+</body>
 </html>

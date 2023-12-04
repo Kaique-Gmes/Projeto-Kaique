@@ -22,7 +22,9 @@ function cadastrar(nome, nick, email, pokemon, senha) {
     return database.executar(instrucao);
 }
 
+
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
 };
