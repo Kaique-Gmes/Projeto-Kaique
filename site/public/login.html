@@ -34,3 +34,61 @@
 </body>
 
 </html>
+
+<script>
+    function autenticar(){
+        var emailVar = input_login.value;
+        var senhaVar = input_senhaLogin.value;
+
+    if (emailVar == "" || senhaVar == "") {
+        alert(`Campos não podem estar em branco`)
+    }
+
+    // console.log("FORM LOGIN: ", emailVar);
+    // console.log("FORM SENHA: ", senhaVar);
+
+    fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            emailServer: emailVar,
+            senhaServer: senhaVar,
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                sessionStorage.EMAIL_USUARIO = json.email;
+                sessionStorage.NOME_USUARIO = json.nome;
+                sessionStorage.ID_USUARIO = json.id;
+                alert(`Login realizado com sucesso!`)
+
+                setTimeout(function () {
+                    window.location = "quizHome.html";
+                }, 1500); // apenas para exibir o loading
+
+            });
+
+        } else {
+            console.log("Houve um erro ao tentar realizar o login!");
+            alert(`Os dados não conferem`)
+            resposta.text().then(texto => {
+                console.error(texto);
+            });
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    return false;
+
+    }
+
+</script>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/quizDashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <title>Quiz - Dashboard</title>
 </head>
@@ -62,14 +63,63 @@
                             <span class="icons"><i class="bi bi-person-circle"></i></span>
                             <span class="text-link">Usuário</span>
                         </a>
-                        <!--GRAFICOS-->
-                        <div class="grafico1">
-
-                        </div>
                     </div>
+                    <!--GRAFICOS-->
+                    <div class="graficos">
+                        <canvas id="grafico1" class="grafico-1">
+                            <script>
+                                const ctx1 = document.getElementById('grafico1');
+
+                                new Chart(ctx1, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: ['Charmander', 'Squirtle', 'Bulbassauro', 'Pikachu'],
+                                        datasets: [{
+                                            label: '# of Votes',
+                                            data: [12, 19, 3, 5, 2, 3],
+                                            borderWidth: 1
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                        </canvas>
+                        <canvas id="grafico2" class="grafico-2">
+                            <script>
+                                const ctx2 = document.getElementById('grafico2');
+
+                                new Chart(ctx2, {
+                                    type: 'doughnut',
+                                    data: {
+                                        labels: ['Charmander', 'Squirtle', 'Bulbassauro', 'Pikachu'],
+                                        datasets: [{
+                                            label: '# of Votes',
+                                            data: [12, 19, 3, 5, 2, 3],
+                                            borderWidth: 1
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                        </canvas>
+                    </div>
+
                 </div>
             </div>
         </div>
         <script src="js/menu.js"></script>
 </body>
+
 </html>

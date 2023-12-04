@@ -113,6 +113,10 @@ nav.left-bar.expandir .text-link {
   margin-left: 110px;
   border-radius: 20px;
 }
+.padding-home .info-home {
+  display: flex;
+  flex-direction: column;
+}
 .padding-home .info-home a {
   height: 100%;
   width: 100%;
@@ -122,4 +126,17 @@ nav.left-bar.expandir .text-link {
   color: #202020;
   font-size: 50px;
   text-decoration: none;
+}
+.padding-home div.graficos {
+  margin-top: 80px;
+  display: flex;
+  margin-left: 100px;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  justify-content: space-evenly;
+}
+.padding-home div.graficos canvas.grafico-2 {
+  display: flex;
+  margin-left: 110px;
 }/*# sourceMappingURL=quizDashboard.css.map */

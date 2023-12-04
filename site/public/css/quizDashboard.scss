@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-@import "../style/colors";
+@import "colors";
 
 
 body {
@@ -130,6 +130,8 @@ nav.left-bar.expandir .text-link{
     border-radius: 20px;
 
     .info-home{
+        display: flex;
+        flex-direction: column;
         a{
             height: 100%;
             width: 100%;
@@ -139,6 +141,21 @@ nav.left-bar.expandir .text-link{
             color: #202020;
             font-size: 50px;
             text-decoration: none;
-        }
+    }
+}
+    div.graficos{
+        margin-top: 80px;
+        display: flex;
+        margin-left: 100px;
+        align-items: center;
+            width: 500px;
+            height: 500px;
+            justify-content: space-evenly;
+
+            canvas.grafico-2{
+                display:flex;
+                margin-left: 110px;
+            }
+                
     }
 }
