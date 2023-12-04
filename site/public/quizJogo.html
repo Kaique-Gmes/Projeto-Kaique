@@ -321,15 +321,12 @@ function responder() {
                     console.log("resposta: ", resposta);
 
                     if (resposta.ok) {
-                            alert(`Cadastro realizado com sucesso!`)
+                            alert(`O pokemon que você se identificou ficou salvo e é possivel ver a mudança na Dashboard!`)
 
-                         setTimeout(() => {
-                             window.location = "quizUser.html";
-                         }, "2000");
                         // limparFormulario();
                         // finalizarAguardar();
                     } else {
-                        throw "Houve um erro ao tentar realizar o cadastro!";
+                        throw "Houve um erro ao tentar realizar o game!";
                     }
                 })
                 .catch(function (resposta) {

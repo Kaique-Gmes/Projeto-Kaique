@@ -2,7 +2,7 @@ var database = require("../database/config");
 
 function buscarDashEscolhidos(){
     var instrucao = `
-    select zona as zona,count(zona) as qtdZona from cao as c join endereco as e on c.fkEndereco = e.idEndereco where c.stats = 'perdi' group by zona;
+    select pokemon,count(pokemon) as qtdpokemon from treinador group by pokemon;
     `
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

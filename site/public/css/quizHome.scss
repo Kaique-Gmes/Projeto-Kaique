@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-@import "../style/colors";
+@import "colors";
 
 body {
     height: 130vh;
@@ -203,11 +203,35 @@ nav.left-bar.expandir .text-link{
                         }
                     }
                 }
-            }
         }
+        .sobreMim{
+            display: flex;
+            margin-top: 135px;
+            img{
+                border-radius: 20px;
+                margin-left: 20px;
+                width: 300px;
+                height: 300px;
+            }
+
+            .text-sobreMim{
+                .titulo{
+                    font-size: 42px;
+                    display: flex;
+                    justify-content: center;
+                    margin-right: 50px;
+                    margin-top: 30px;
+                }
+
+                .text{
+                    font-size: 28px;
+                    display: flex;
+                    text-align-last: center;
+                    margin-left: 20px;
+                    margin-top: 30px;
+                }
+                
+            }
+       }
     }
-
-
-
-
-
+}
