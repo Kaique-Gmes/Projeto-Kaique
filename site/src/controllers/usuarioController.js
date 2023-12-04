@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var usuarioModel = require("../models/usuarioModel");
+=======
+var usuarioModel = require ("../models/usuarioModel");
+>>>>>>> 8efaf3e2c8bfe9a248aaf23bfe26d924b00b9c3c
 var aquarioModel = require("../models/aquarioModel");
 
 function autenticar(req, res) {
@@ -28,7 +32,11 @@ function autenticar(req, res) {
                                         email: resultadoAutenticar[0].email,
                                         nome: resultadoAutenticar[0].nome,
                                         senha: resultadoAutenticar[0].senha,
+<<<<<<< HEAD
                                         
+=======
+
+>>>>>>> 8efaf3e2c8bfe9a248aaf23bfe26d924b00b9c3c
                                     });
                                 } else {
                                     res.status(204).json({ aquarios: [] });
@@ -48,13 +56,20 @@ function autenticar(req, res) {
                 }
             );
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8efaf3e2c8bfe9a248aaf23bfe26d924b00b9c3c
 }
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
+<<<<<<< HEAD
     var nick = req.body.nickServer;
+=======
+    var nick = req.body.nickServe;
+>>>>>>> 8efaf3e2c8bfe9a248aaf23bfe26d924b00b9c3c
     var email = req.body.emailServer;
     var pokemon = req.body.pokemonServer;
     var senha = req.body.senhaServer;
@@ -66,6 +81,7 @@ function cadastrar(req, res) {
         res.status(400).send("Seu nick está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
+<<<<<<< HEAD
     } else if (pokemon == undefined) {
         res.status(400).send("Seu pokemon está undefined!");
     } else if (senha == undefined) {
@@ -74,6 +90,16 @@ function cadastrar(req, res) {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.cadastrar(nome, nick, email, pokemon, senha)
+=======
+    } else if (senha == undefined) {
+        res.status(400).send("Seu pokemon está undefined!");
+    } else if (pokemon == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    }else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar(nome, nick, email, senha, pokemon)
+>>>>>>> 8efaf3e2c8bfe9a248aaf23bfe26d924b00b9c3c
             .then(
                 function (resultado) {
                     res.json(resultado);

@@ -1,0 +1,175 @@
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+//background - home
+
+.bg-home{
+    position: relative;
+    height: 120%;
+
+}
+
+.bg-home ::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom,rgba(6, 18, 30, 0.1), $primary-normal), url(../../assets/pikachu\ -\ Copia.jpg);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+// HERO ----------------------
+
+.hero{
+    color: $white-normal;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 48px;
+    }
+}
+
+.button-cadastro{
+    padding: 14px 28px;
+    color: $white-normal;
+    border: 1px solid $white-normal;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+
+.button-cadastro:hover{
+    border: 1px solid $secundary-light;
+    background-color: $secundary-dark;
+    transition: background-color 0.8s;
+}
+
+// ABOUT
+.about{
+    color: $white-normal;
+    background-color: $primary-dark;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 34px, 14px, 64px, 14px;
+    img{
+        max-width: 200px;
+    }
+}
+
+.about-content div{
+    flex: 1;
+}
+
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;;
+    }
+}
+
+.about2{
+    color: $white-normal;
+    background-color: $primary-dark;
+}
+
+.about-content2{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 34px, 14px, 64px, 14px;
+    img{
+        max-width: 200;
+        max-height: 450px;
+    }
+}
+
+.about-content2 div{
+    flex: 1;
+}
+
+.about-description2{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+
+.footer-info {
+    text-align: left;
+}
+
+.footer-social {
+    text-align: right;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    border-bottom: 2px solid #fff;
+}
+
