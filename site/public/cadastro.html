@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleCadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="bg-cadastro">
+        <main class="hero-cadastro">
+            <div class="texto-cadastro">
+                <h1>Cadastro</h1>
+            </div>
+            <div class="cadastro-content">
+                <div class="inputs-cadastro">
+                    <div class="input1">
+                        <input placeholder="nome" class="input_cadastro" id="input_nomeCompleto">
+                        <input placeholder="nickname" class="input_cadastro2" id="input_nickname">
+                    </div>
+                    <div class="input2">
+                        <input placeholder="email" class="input_cadastro" id="input_email">
+                        <input placeholder="seu inicial" class="input_cadastro2" id="input_inicial">
+                    </div>
+                    <div class="input3">
+                        <input type="password" placeholder="senha" class="input_cadastro" id="input_senha">
+                        <input type="password" placeholder="confirmar senha" class="input_cadastro2"
+                            id="input_confirmarSenha">
+                    </div>
+                </div>
+            </div>
+            <div class="botao-cadastro">
+                <a id="cadastrar-login" >
+                    <button class="botao-cadastrar" type="submit" onclick="cadastrar()">Cadastrar</button>
+                </a>
+            </div>
+            <div class="ref-to-login">
+                <h3>Já é um treinador Pokemon? <a href="login.html">Faça login aqui!</a></h3>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+
+    var nomeVar = input_nomeCompleto.value;
+    var nickVar = input_nickname.value;
+    var emailVar = input_email.value;
+    var pokemonVar = input_inicial.value;
+    var senhaVar = input_senha.value;
+    var confirmarSenha = input_confirmarSenha.value;
+
+    if(nomeVar.indexOf(' ') == -1 && nomeVar.length <=4){
+        alert(`Insira seu nome COMPLETO`)
+    }
+    else if(nickVar.length < 1){
+        alert(`Insira um Nickname`)
+    }
+    else if(emailVar.indexOf('@') == -1 || emailVar.indexOf('.') == -1){
+        alert(`Email inválido`)
+    }
+    else if(pokemonVar != "Charmander" && 
+    pokemonVar != "Bulbassauro" && 
+    pokemonVar != "Squirtle" && 
+    pokemonVar != "Pikachu"){
+        alert(`Insira um pokemon inicial válido`)
+    }
+    else if(senhaVar.length < 8){
+        alert(`Senha inválida`)
+    }
+    else if(senhaVar.indexOf('!') == -1 && 
+    senhaVar.indexOf('@') == -1 &&
+    senhaVar.indexOf('#') == -1 &&
+    senhaVar.indexOf('$') == -1 &&
+    senhaVar.indexOf('%') == -1 &&
+    senhaVar.indexOf('&') == -1 &&
+    senhaVar.indexOf('*') == -1
+    ){
+alert(`Insíra um caracter especial`)
+    }
+    else if(confirmarSenha != senhaVar){
+        alert(`Senhas não coincidem`)
+    }
+    else{
+        console.log(nomeVar, nickVar, emailVar, pokemonVar, senhaVar)
+        console.log(JSON.stringify({
+          nomeServer: nomeVar,
+          nickServer: nickVar,
+          emailServer: emailVar,
+          pokemonServer: pokemonVar,
+          senhaServer: senhaVar,
+        }))
+        fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nomeServer: nomeVar,
+          nickServer: nickVar,
+          emailServer: emailVar,
+          pokemonServer: pokemonVar,
+          senhaServer: senhaVar,
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+  
+          if (resposta.ok) {
+            cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML =
+                "Cadastro realizado com sucesso!";
+  
+            setTimeout(() => {
+              window.location = "login.html";
+            }, "2000");
+  
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+        });
+  
+    }    
+}
+</script>
