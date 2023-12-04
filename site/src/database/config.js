@@ -23,7 +23,7 @@ var mySqlConfig = {
     host: "localhost",
     database: "pokeint",
     user: "root",
-    password: "191018",
+    password: "215912",
 };
 
 function executar(instrucao) {

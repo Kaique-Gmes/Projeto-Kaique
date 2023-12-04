@@ -95,7 +95,7 @@ btnExp.addEventListener('click', function () {
 })
 
 
-
+var nickTreinador= sessionStorage.NOME_USUARIO
 
 var jogoVar = ""
 var contador = 0;
@@ -314,7 +314,8 @@ function responder() {
                 body: JSON.stringify({
                     // crie um atributo que recebe o valor recuperado aqui
                     // Agora vá para o arquivo routes/usuario.js
-                    jogoServer: jogoVar
+                    jogoServer: jogoVar,
+                    nickServer: nickTreinador
                 }),
             })
                 .then(function (resposta) {

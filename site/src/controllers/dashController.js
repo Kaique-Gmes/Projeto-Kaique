@@ -24,6 +24,7 @@ function identificados(req, res) {
     });
 };
 
+
 module.exports = {
     identificados,
     escolhidos

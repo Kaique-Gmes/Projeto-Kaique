@@ -2,8 +2,9 @@ var jogoModel = require("../models/jogoModel");
 
 function responder(req, res) {
     var jogo = req.body.jogoServer;
+    var nick= req.body.nickServer;
 
-    jogoModel.responder(jogo)
+    jogoModel.responder(jogo, nick)
         .then(function (Resultado) {
             res.json(Resultado);
         })
