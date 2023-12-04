@@ -1,9 +1,6 @@
 var mysql = require("mysql2");
-<<<<<<< HEAD
 var sql = require('mssql');
-=======
-//var sql = require('mssql');
->>>>>>> 8efaf3e2c8bfe9a248aaf23bfe26d924b00b9c3c
+
 
 // CONEXÃO DO SQL SERVER - AZURE (NUVEM)
 var sqlServerConfig = {
